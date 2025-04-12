@@ -1,4 +1,4 @@
-import 'package:animated_snackbars/animated_snackbars.dart';
+import 'package:motion_snackbar/motion_snackbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
