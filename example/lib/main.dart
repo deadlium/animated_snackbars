@@ -6,7 +6,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({super.key, required this.title});
 
   final String title;
 
@@ -116,12 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       message: 'Custom Snackbar',
                       description:
                           'This is a custom snackbar with purple color.',
-                      color: Color.fromRGBO(
-                        Colors.purple.red,
-                        Colors.purple.green,
-                        Colors.purple.blue,
-                        0.9,
-                      ),
+                      color: Colors.purple,
                       duration: Duration(milliseconds: 3000),
                     );
                   },
@@ -136,12 +131,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       context: context,
                       message: 'Long Duration',
                       description: 'This snackbar stays visible for 5 seconds.',
-                      color: Color.fromRGBO(
-                        Colors.teal.red,
-                        Colors.teal.green,
-                        Colors.teal.blue,
-                        0.9,
-                      ),
+                      color: Colors.teal,
                       duration: Duration(seconds: 5),
                     );
                   },

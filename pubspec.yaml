@@ -1,6 +1,6 @@
 name: motion_snackbar
-description: "Flutter package for animated snackbars. Includes success, error, info, warning, & custom styles with smooth directional animations. Customize message, description, color & duration for improved feedback."
-version: 0.0.2
+description: "Flutter animated snackbars: success, error, info, warning & custom. Smooth directional transitions, fully customizable!"
+version: 0.0.3
 homepage: https://github.com/deadlium
 repository: https://github.com/deadlium/animated_snackbars
 
