@@ -1,7 +1,6 @@
 import 'package:animated_snackbars/animated_snackbars.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
   group('SnackbarUtils Tests', () {
@@ -10,26 +9,22 @@ void main() {
     ) async {
       // Build our app and trigger a frame.
       await tester.pumpWidget(
-        ScreenUtilInit(
-          designSize: const Size(375, 812), // Example design size
-          builder:
-              (context, child) => MaterialApp(
-                home: Scaffold(
-                  body: Builder(
-                    builder:
-                        (context) => ElevatedButton(
-                          onPressed: () {
-                            SnackbarUtils.showAnimatedSnackbar(
-                              context: context,
-                              message: 'Test Message',
-                              description: 'Test Description',
-                            );
-                          },
-                          child: const Text('Show Snackbar'),
-                        ),
+        MaterialApp(
+          home: Scaffold(
+            body: Builder(
+              builder:
+                  (context) => ElevatedButton(
+                    onPressed: () {
+                      SnackbarUtils.showAnimatedSnackbar(
+                        context: context,
+                        message: 'Test Message',
+                        description: 'Test Description',
+                      );
+                    },
+                    child: const Text('Show Snackbar'),
                   ),
-                ),
-              ),
+            ),
+          ),
         ),
       );
 
@@ -55,26 +50,22 @@ void main() {
       WidgetTester tester,
     ) async {
       await tester.pumpWidget(
-        ScreenUtilInit(
-          designSize: const Size(375, 812), // Example design size
-          builder:
-              (context, child) => MaterialApp(
-                home: Scaffold(
-                  body: Builder(
-                    builder:
-                        (context) => ElevatedButton(
-                          onPressed: () {
-                            SnackbarUtils.showSuccessSnackbar(
-                              context: context,
-                              message: 'Success Message',
-                              description: 'Success Description',
-                            );
-                          },
-                          child: const Text('Show Success Snackbar'),
-                        ),
+        MaterialApp(
+          home: Scaffold(
+            body: Builder(
+              builder:
+                  (context) => ElevatedButton(
+                    onPressed: () {
+                      SnackbarUtils.showSuccessSnackbar(
+                        context: context,
+                        message: 'Success Message',
+                        description: 'Success Description',
+                      );
+                    },
+                    child: const Text('Show Success Snackbar'),
                   ),
-                ),
-              ),
+            ),
+          ),
         ),
       );
 
@@ -98,26 +89,22 @@ void main() {
       WidgetTester tester,
     ) async {
       await tester.pumpWidget(
-        ScreenUtilInit(
-          designSize: const Size(375, 812), // Example design size
-          builder:
-              (context, child) => MaterialApp(
-                home: Scaffold(
-                  body: Builder(
-                    builder:
-                        (context) => ElevatedButton(
-                          onPressed: () {
-                            SnackbarUtils.showErrorSnackbar(
-                              context: context,
-                              message: 'Error Message',
-                              description: 'Error Description',
-                            );
-                          },
-                          child: const Text('Show Error Snackbar'),
-                        ),
+        MaterialApp(
+          home: Scaffold(
+            body: Builder(
+              builder:
+                  (context) => ElevatedButton(
+                    onPressed: () {
+                      SnackbarUtils.showErrorSnackbar(
+                        context: context,
+                        message: 'Error Message',
+                        description: 'Error Description',
+                      );
+                    },
+                    child: const Text('Show Error Snackbar'),
                   ),
-                ),
-              ),
+            ),
+          ),
         ),
       );
 
@@ -141,26 +128,22 @@ void main() {
       WidgetTester tester,
     ) async {
       await tester.pumpWidget(
-        ScreenUtilInit(
-          designSize: const Size(375, 812), // Example design size
-          builder:
-              (context, child) => MaterialApp(
-                home: Scaffold(
-                  body: Builder(
-                    builder:
-                        (context) => ElevatedButton(
-                          onPressed: () {
-                            SnackbarUtils.showInfoSnackbar(
-                              context: context,
-                              message: 'Info Message',
-                              description: 'Info Description',
-                            );
-                          },
-                          child: const Text('Show Info Snackbar'),
-                        ),
+        MaterialApp(
+          home: Scaffold(
+            body: Builder(
+              builder:
+                  (context) => ElevatedButton(
+                    onPressed: () {
+                      SnackbarUtils.showInfoSnackbar(
+                        context: context,
+                        message: 'Info Message',
+                        description: 'Info Description',
+                      );
+                    },
+                    child: const Text('Show Info Snackbar'),
                   ),
-                ),
-              ),
+            ),
+          ),
         ),
       );
 
@@ -185,26 +168,22 @@ void main() {
       WidgetTester tester,
     ) async {
       await tester.pumpWidget(
-        ScreenUtilInit(
-          designSize: const Size(375, 812), // Example design size
-          builder:
-              (context, child) => MaterialApp(
-                home: Scaffold(
-                  body: Builder(
-                    builder:
-                        (context) => ElevatedButton(
-                          onPressed: () {
-                            SnackbarUtils.showWarningSnackbar(
-                              context: context,
-                              message: 'Warning Message',
-                              description: 'Warning Description',
-                            );
-                          },
-                          child: const Text('Show Warning Snackbar'),
-                        ),
+        MaterialApp(
+          home: Scaffold(
+            body: Builder(
+              builder:
+                  (context) => ElevatedButton(
+                    onPressed: () {
+                      SnackbarUtils.showWarningSnackbar(
+                        context: context,
+                        message: 'Warning Message',
+                        description: 'Warning Description',
+                      );
+                    },
+                    child: const Text('Show Warning Snackbar'),
                   ),
-                ),
-              ),
+            ),
+          ),
         ),
       );
 
@@ -229,25 +208,21 @@ void main() {
   group('SnackbarUtils Additional Tests', () {
     testWidgets('Custom duration test', (WidgetTester tester) async {
       await tester.pumpWidget(
-        ScreenUtilInit(
-          designSize: const Size(375, 812),
-          builder:
-              (context, child) => MaterialApp(
-            home: Scaffold(
-              body: Builder(
-                builder:
-                    (context) => ElevatedButton(
-                  onPressed: () {
-                    SnackbarUtils.showAnimatedSnackbar(
-                      context: context,
-                      message: 'Custom Duration',
-                      description: 'Test Description',
-                      duration: const Duration(milliseconds: 1000),
-                    );
-                  },
-                  child: const Text('Show Custom Duration'),
-                ),
-              ),
+        MaterialApp(
+          home: Scaffold(
+            body: Builder(
+              builder:
+                  (context) => ElevatedButton(
+                    onPressed: () {
+                      SnackbarUtils.showAnimatedSnackbar(
+                        context: context,
+                        message: 'Custom Duration',
+                        description: 'Test Description',
+                        duration: const Duration(milliseconds: 1000),
+                      );
+                    },
+                    child: const Text('Show Custom Duration'),
+                  ),
             ),
           ),
         ),
@@ -279,40 +254,36 @@ void main() {
 
     testWidgets('Multiple snackbars test', (WidgetTester tester) async {
       await tester.pumpWidget(
-        ScreenUtilInit(
-          designSize: const Size(375, 812),
-          builder:
-              (context, child) => MaterialApp(
-                home: Scaffold(
-                  body: Builder(
-                    builder:
-                        (context) => Column(
-                          children: [
-                            ElevatedButton(
-                              onPressed: () {
-                                SnackbarUtils.showSuccessSnackbar(
-                                  context: context,
-                                  message: 'First Snackbar',
-                                  description: 'First Description',
-                                );
-                              },
-                              child: const Text('Show First'),
-                            ),
-                            ElevatedButton(
-                              onPressed: () {
-                                SnackbarUtils.showErrorSnackbar(
-                                  context: context,
-                                  message: 'Second Snackbar',
-                                  description: 'Second Description',
-                                );
-                              },
-                              child: const Text('Show Second'),
-                            ),
-                          ],
-                        ),
+        MaterialApp(
+          home: Scaffold(
+            body: Builder(
+              builder:
+                  (context) => Column(
+                    children: [
+                      ElevatedButton(
+                        onPressed: () {
+                          SnackbarUtils.showSuccessSnackbar(
+                            context: context,
+                            message: 'First Snackbar',
+                            description: 'First Description',
+                          );
+                        },
+                        child: const Text('Show First'),
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          SnackbarUtils.showErrorSnackbar(
+                            context: context,
+                            message: 'Second Snackbar',
+                            description: 'Second Description',
+                          );
+                        },
+                        child: const Text('Show Second'),
+                      ),
+                    ],
                   ),
-                ),
-              ),
+            ),
+          ),
         ),
       );
 
@@ -340,27 +311,23 @@ void main() {
       const customColor = Color(0xDD800080); // Purple color
 
       await tester.pumpWidget(
-        ScreenUtilInit(
-          designSize: const Size(375, 812),
-          builder:
-              (context, child) => MaterialApp(
-                home: Scaffold(
-                  body: Builder(
-                    builder:
-                        (context) => ElevatedButton(
-                          onPressed: () {
-                            SnackbarUtils.showAnimatedSnackbar(
-                              context: context,
-                              message: 'Custom Color',
-                              description: 'Test Description',
-                              color: customColor,
-                            );
-                          },
-                          child: const Text('Show Custom Color'),
-                        ),
+        MaterialApp(
+          home: Scaffold(
+            body: Builder(
+              builder:
+                  (context) => ElevatedButton(
+                    onPressed: () {
+                      SnackbarUtils.showAnimatedSnackbar(
+                        context: context,
+                        message: 'Custom Color',
+                        description: 'Test Description',
+                        color: customColor,
+                      );
+                    },
+                    child: const Text('Show Custom Color'),
                   ),
-                ),
-              ),
+            ),
+          ),
         ),
       );
 
@@ -380,26 +347,22 @@ void main() {
       WidgetTester tester,
     ) async {
       await tester.pumpWidget(
-        ScreenUtilInit(
-          designSize: const Size(375, 812),
-          builder:
-              (context, child) => MaterialApp(
-                home: Scaffold(
-                  body: Builder(
-                    builder:
-                        (context) => ElevatedButton(
-                          onPressed: () {
-                            SnackbarUtils.showAnimatedSnackbar(
-                              context: context,
-                              message: '',
-                              description: '',
-                            );
-                          },
-                          child: const Text('Show Empty'),
-                        ),
+        MaterialApp(
+          home: Scaffold(
+            body: Builder(
+              builder:
+                  (context) => ElevatedButton(
+                    onPressed: () {
+                      SnackbarUtils.showAnimatedSnackbar(
+                        context: context,
+                        message: '',
+                        description: '',
+                      );
+                    },
+                    child: const Text('Show Empty'),
                   ),
-                ),
-              ),
+            ),
+          ),
         ),
       );
 
@@ -425,26 +388,22 @@ void main() {
           'This is a very long description that should also be properly displayed in the snackbar without any issues or overflow problems.';
 
       await tester.pumpWidget(
-        ScreenUtilInit(
-          designSize: const Size(375, 812),
-          builder:
-              (context, child) => MaterialApp(
-                home: Scaffold(
-                  body: Builder(
-                    builder:
-                        (context) => ElevatedButton(
-                          onPressed: () {
-                            SnackbarUtils.showAnimatedSnackbar(
-                              context: context,
-                              message: longMessage,
-                              description: longDescription,
-                            );
-                          },
-                          child: const Text('Show Long Text'),
-                        ),
+        MaterialApp(
+          home: Scaffold(
+            body: Builder(
+              builder:
+                  (context) => ElevatedButton(
+                    onPressed: () {
+                      SnackbarUtils.showAnimatedSnackbar(
+                        context: context,
+                        message: longMessage,
+                        description: longDescription,
+                      );
+                    },
+                    child: const Text('Show Long Text'),
                   ),
-                ),
-              ),
+            ),
+          ),
         ),
       );
 
