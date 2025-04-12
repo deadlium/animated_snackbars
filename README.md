@@ -20,12 +20,8 @@ customization options.
 
 **Example Images**
 
-<img scr="./example_img/success.png">
-<img scr="./example_img/error.png">
-<img scr="./example_img/information.png">
-<img scr="./example_img/warning.png">
-<img scr="./example_img/custom_snackbar.png">
-<img scr="./example_img/long_duration.png">
+<img src="https://github.com/deadlium/animated_snackbars/blob/master/example_img/success.png" height="600"> <img src="https://github.com/deadlium/animated_snackbars/blob/master/example_img/error.png" height="600"> <img src="https://github.com/deadlium/animated_snackbars/blob/master/example_img/information.png" height="600">
+<img src="https://github.com/deadlium/animated_snackbars/blob/master/example_img/warning.png" height="600"> <img src="https://github.com/deadlium/animated_snackbars/blob/master/example_img/custom_snackbar.png" height="600"> <img src="https://github.com/deadlium/animated_snackbars/blob/master/example_img/long_duration.png" height="600">
 
 ---
 
