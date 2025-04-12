@@ -1,34 +1,20 @@
-name: Flutter CI
+name: motion_snackbar
+description: "Flutter animated snackbars: success, error, info, warning & custom. Smooth directional transitions, fully customizable!"
+version: 0.0.5
+homepage: https://github.com/deadlium
+repository: https://github.com/deadlium/animated_snackbars
 
-on:
-  push:
-    branches: ["master"]
-  pull_request:
-    branches: ["master"]
+environment:
+  sdk: ^3.7.2
+  flutter: ">=1.17.0"
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+dependencies:
+  flutter:
+    sdk: flutter
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
 
-      - name: Set up Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          flutter-version: '3.29.2' # ✅ Dart 3.7.2
-          channel: "stable"
-          cache: true
-
-      - name: Install dependencies
-        run: flutter pub get
-
-      - name: Verify formatting
-        run: dart format --output=none --set-exit-if-changed .
-
-      - name: Analyze project source
-        run: flutter analyze --fatal-infos
-
-      - name: Run tests
-        run: flutter test
+flutter:
