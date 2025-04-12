@@ -46,18 +46,12 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 Text(
                   'Directional Snackbar Examples',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: 8),
                 Text(
                   'Animates from bottom to top when appearing, and top to bottom when disappearing',
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.grey.shade600,
-                  ),
+                  style: TextStyle(fontSize: 14, color: Colors.grey.shade600),
                 ),
                 SizedBox(height: 20),
                 _buildSnackbarButton(
@@ -155,10 +149,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 SizedBox(height: 30),
                 Text(
                   'How to use:',
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: 10),
                 Container(
