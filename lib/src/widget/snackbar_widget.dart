@@ -66,10 +66,7 @@ class SnackBarWidget extends StatelessWidget {
                 SizedBox(height: 4),
                 Text(
                   description,
-                  style: TextStyle(
-                    color: Colors.white70,
-                    fontSize: 14,
-                  ),
+                  style: TextStyle(color: Colors.white70, fontSize: 14),
                 ),
               ],
             ),
