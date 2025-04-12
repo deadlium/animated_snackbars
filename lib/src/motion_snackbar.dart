@@ -24,11 +24,11 @@ class SnackbarUtils {
     final overlayEntry = OverlayEntry(
       builder:
           (context) => _DirectionalSnackbar(
-        message: message,
-        description: description,
-        color: color,
-        duration: duration,
-      ),
+            message: message,
+            description: description,
+            color: color,
+            duration: duration,
+          ),
     );
 
     // Show the animated snackbar
@@ -157,8 +157,8 @@ class _DirectionalSnackbarState extends State<_DirectionalSnackbar>
 
     // Schedule exit animation
     Future.delayed(widget.duration - const Duration(milliseconds: 500)).then((
-        _,
-        ) {
+      _,
+    ) {
       if (mounted) {
         // Change slide animation for exit
         _slideAnimation = Tween<Offset>(
@@ -193,11 +193,11 @@ class _DirectionalSnackbarState extends State<_DirectionalSnackbar>
 
     // Calculate bottom position - appear above keyboard when it's visible
     final bottomPosition =
-    keyboardHeight > 0
-        ? keyboardHeight +
-        8.0 // Position just above keyboard with small margin
-        : safeBottomPadding +
-        20.0; // Default position when keyboard is hidden
+        keyboardHeight > 0
+            ? keyboardHeight +
+                8.0 // Position just above keyboard with small margin
+            : safeBottomPadding +
+                20.0; // Default position when keyboard is hidden
 
     return Positioned(
       bottom: bottomPosition,
