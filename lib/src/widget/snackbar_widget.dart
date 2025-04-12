@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SnackBarWidget extends StatelessWidget {
   const SnackBarWidget({
@@ -15,10 +14,10 @@ class SnackBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 14.h),
+      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 14),
       decoration: BoxDecoration(
         color: color.withAlpha(180),
-        borderRadius: BorderRadius.circular(16.r),
+        borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
             color: color.withAlpha(100),
@@ -31,10 +30,10 @@ class SnackBarWidget extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            padding: EdgeInsets.all(8.r),
+            padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
               color: Colors.white30,
-              borderRadius: BorderRadius.circular(12.r),
+              borderRadius: BorderRadius.circular(12),
             ),
             child: Icon(
               color == const Color(0xDD28A745)
@@ -47,10 +46,10 @@ class SnackBarWidget extends StatelessWidget {
                   ? Icons.warning
                   : Icons.notification_important,
               color: Colors.white,
-              size: 24.sp,
+              size: 24,
             ),
           ),
-          SizedBox(width: 12.w),
+          SizedBox(width: 12),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -60,16 +59,16 @@ class SnackBarWidget extends StatelessWidget {
                   message,
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 16.sp,
+                    fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 4.h),
+                SizedBox(height: 4),
                 Text(
                   description,
                   style: TextStyle(
                     color: Colors.white70,
-                    fontSize: 14.sp,
+                    fontSize: 14,
                   ),
                 ),
               ],
