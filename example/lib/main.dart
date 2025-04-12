@@ -1,4 +1,4 @@
-import 'package:animated_snackbars/animated_snackbars.dart';
+import 'package:motion_snackbar/motion_snackbar.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -175,7 +175,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         style: TextStyle(fontWeight: FontWeight.w500),
                       ),
                       Text(
-                        "import 'package:animated_snackbars/animated_snackbars.dart';",
+                        "import 'package:animated_snackbars/motion_snackbar.dart';",
                         style: TextStyle(
                           fontFamily: 'monospace',
                           fontSize: 12,
