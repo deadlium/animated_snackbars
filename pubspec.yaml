@@ -1,5 +1,5 @@
 name: animated_snackbars
-description: "A Flutter package providing beautifully animated and customizable snackbars to enhance user experience. This package offers a simple and intuitive way to display various types of snackbars (success, error, info, warning, custom) with smooth directional animations (bottom-to-top on appear, top-to-bottom on disappear). It includes utility functions for quick integration and allows for customization of message, description, color, and duration. Elevate your app's feedback mechanisms with these visually appealing and informative snackbars."
+description: "Flutter package for animated snackbars. Includes success, error, info, warning, & custom styles with smooth directional animations. Customize message, description, color & duration for improved feedback."
 version: 0.0.1
 homepage: https://github.com/deadlium
 repository: https://github.com/deadlium/animated_snackbars
