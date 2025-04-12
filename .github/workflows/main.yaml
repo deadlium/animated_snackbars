@@ -11,16 +11,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.16.0' # Specify a Flutter version that includes Dart 3.2.0 or higher
+          flutter-version: '3.29.2' # ✅ Dart 3.7.2
           channel: "stable"
           cache: true
-          cache-key: 'flutter-:os:-:channel:-:version:-:hash:'
-          cache-path: '${{ runner.tool_cache }}/flutter'
 
       - name: Install dependencies
         run: flutter pub get
@@ -33,9 +32,3 @@ jobs:
 
       - name: Run tests
         run: flutter test
-
-      - name: Build APK
-        run: flutter build apk --debug
-
-      - name: Build appbundle
-        run: flutter build appbundle --debug
