@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:animated_snackbars/animated_snackbars.dart';
+import 'package:motion_snackbar/motion_snackbar.dart';
 
 class SnackbarUtils {
   /// Shows an animated snackbar with customizable properties
